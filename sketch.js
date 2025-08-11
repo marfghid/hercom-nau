@@ -1,12 +1,17 @@
-var m;
-
+var d;
 function setup() {
-  createCanvas(windowWidth,windowHeight);
-  background(255,179,224);
+  createCanvas(windowWidth, windowHeight);
+  background(255,113,224);
 }
 
 function draw() {
-  m = random(10,60);
-  fill(255,100)
-  ellipse(mouseX,mouseY,m,m);
+  d = random(50,100)
+  fill(255,random(55,200));
+  ellipse(mouseX, mouseY,d,d);
+}
+
+function keyPressed() {
+  if (key === 'p') {
+    save('dibujo.jpg');
+  }
 }
